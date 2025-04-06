@@ -13,14 +13,13 @@
 Run the script directly using `curl`:
 
 ```bash
-curl -sL https://bit.ly/421Q5Ao | sudo bash -- <package1> <package2> ... [options]
+curl -sL https://bit.ly/421Q5Ao > apt-bundle; chmod u+x apt-bundle
+./apt-bundle git --create-bundle
+tar tvf apt-package-bundle.tar.gz |wc -l
+30
 ```
 
 ### Example:
-
-```bash
-curl -sL https://bit.ly/421Q5Ao | sudo bash -- git curl --create-bundle
-```
 
 ```bash
 apt-bundle.sh git curl --create-bundle
