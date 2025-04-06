@@ -21,8 +21,6 @@ RESET='\033[0m'
 CREATE_BUNDLE=false
 PKG_LIST=()
 
-
-
 # Parse arguments
 while [[ "$#" -gt 0 ]]; do
     case "$1" in

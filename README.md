@@ -30,12 +30,14 @@ apt-bundle.sh git curl --create-bundle
 ### Example 3
 
 ```bash
-docker run -it debian:12.9
+docker run -it -v $(pwd):/host debian:12.9
+
 apt update && apt install jq
 curl -sL https://bit.ly/421Q5Ao > apt-bundle; chmod u+x apt-bundle
-./apt-bundle git --create-bundle
-tar tvf apt-package-bundle.tar.gz |wc -l
 
+./apt-bundle git --create-bundle
+
+cp apt-package-bundle.tar.gz /host/
 ```
 
 
