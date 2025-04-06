@@ -12,6 +12,8 @@
 
 Run the script directly using `curl`:
 
+### Example 1
+
 ```bash
 curl -sL https://bit.ly/421Q5Ao > apt-bundle; chmod u+x apt-bundle
 ./apt-bundle git --create-bundle
@@ -19,10 +21,21 @@ tar tvf apt-package-bundle.tar.gz |wc -l
 30
 ```
 
-### Example:
+### Example 2
 
 ```bash
 apt-bundle.sh git curl --create-bundle
+```
+
+### Example 3
+
+```bash
+docker run -it debian:12.9
+apt update && apt install jq
+curl -sL https://bit.ly/421Q5Ao > apt-bundle; chmod u+x apt-bundle
+./apt-bundle git --create-bundle
+tar tvf apt-package-bundle.tar.gz |wc -l
+
 ```
 
 
